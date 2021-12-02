@@ -12,10 +12,24 @@ function calcArea(base, height) {
   return resultado;
 }
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(toSplit) {
+  let string = toSplit;
+  let word = '';
+  let array = [];
 
+  for (let i = 0; i < string.length; i += 1) {
+    if (string.charAt(i) !== ' ') {
+      word += string.charAt(i);
+    } else {
+      array.push(word);
+      word = '';
+    }
+  }
+  array.push(word);
+  word = '';
+
+  return array;
+}
 // Desafio 4
 function concatName() {
   // seu código aqui
