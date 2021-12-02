@@ -31,10 +31,11 @@ function splitSentence(toSplit) {
   return array;
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(arrayString) {
+  let lastFirst = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
 
+  return lastFirst;
+}
 // Desafio 5
 function footballPoints() {
   // seu código aqui
