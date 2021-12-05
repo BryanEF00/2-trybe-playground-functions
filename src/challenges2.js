@@ -1,3 +1,5 @@
+const { TestWatcher } = require('@jest/core');
+
 // Desafio 10
 function techList(techName, name) {
   techName.sort();
@@ -79,10 +81,22 @@ function triangleCheck(lineA, lineB, lineC) {
   return isPossible;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(alcohol) {
+  //d+ "é digito ou mais" e "g" é pra englobar toda a string.
+  let glassOfWater = alcohol.match(/\d+/g);
+  for (let i = 0; i < glassOfWater.length; i += 1) {
+    glassOfWater[i] = parseInt(glassOfWater[i]);
+  }
 
+  let toHydrate = 0;
+  for (let i = 0; i < glassOfWater.length; i += 1) {
+    toHydrate += glassOfWater[i];
+  }
+  if (toHydrate > 1) {
+    return toHydrate + ' copos de água';
+  }
+  return toHydrate + ' copo de água';
+}
 module.exports = {
   generatePhoneNumber,
   techList,
