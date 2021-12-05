@@ -65,10 +65,19 @@ function generatePhoneNumber(numberArray) {
   return phoneNumber;
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  isPossible = false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    return (isPossible = true);
+  }
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    return (isPossible = true);
+  }
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    return (isPossible = true);
+  }
+  return isPossible;
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
